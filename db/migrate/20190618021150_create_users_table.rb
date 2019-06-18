@@ -4,6 +4,7 @@ class CreateUsersTable < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :email
       t.string :password_digest  #need to call has_secure_password macro in user .rb, allows to use authenticate
+      t.timestamps null: false
     end
   end
 end
