@@ -1,9 +1,9 @@
-class CreateSmbbjProgressTrackers < ActiveRecord::Migration
+class CreateSmbbjProgressTrackers < ActiveRecord::Migration[5.2]
   def change
     create_table :smbbj_progress_trackers do |t|
       t.string :content
-      t.ineger :user_id
-      
+      t.integer :user_id
+
       t.timestamps null: false #adds time stamps
     end
   end
