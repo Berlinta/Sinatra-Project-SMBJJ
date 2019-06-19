@@ -4,5 +4,5 @@ require './config/environment'
 #   raise 'Migrations are pending. Run `rake db:migrate` to resolve the issue.'
 # end
 
-
+use UsersController
 run ApplicationController
