@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_06_18_022104) do
 
-  create_table "smbbj_progress_trackers", force: :cascade do |t|
+  create_table "techniques", force: :cascade do |t|
     t.string "content"
     t.integer "user_id"
     t.datetime "created_at", null: false
