@@ -1,1 +1,16 @@
-<h3>SHOW TECHNIQUE</h3>
+<h1>Technique</h1>
+
+<br>
+
+<p><%=@technique.content%></p>
+
+ <form action="/techniques/<%=@technique.id%>" method="POST">
+  <input type="hidden" name="_method" value="patch">
+  <input type="text" id="content" name="content">
+  <input type="submit" value="Edit Technique">
+</form>
+
+ <form action="/techniques/<%=@technique.id%>" method="POST">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Technique">
+</form>

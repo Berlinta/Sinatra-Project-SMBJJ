@@ -1,0 +1,9 @@
+<h1>Change technique</h1>
+
+ <p><%=@technique.content%></p>
+
+ <form action="/techniques/<%=@technique.id%>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input type="text" id="content" name="content">
+  <input type="submit" value="submit">
+</form>

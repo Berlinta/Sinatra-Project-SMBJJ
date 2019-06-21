@@ -14,7 +14,7 @@ class UsersController < ApplicationController
        session[:user_id] = @user.id #key value pair/ logging in the user
        redirect to '/techniques'
     else
-      redirect to '/'
+      redirect to '/signup'
     end
   end
 
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   post '/signup' do # creating a new user
     #binding.pry
     if params[:name].empty? || params[:email].empty? || params[:password].empty?
-      redirect to '/'
+      redirect to '/signup'
     else
       @user = User.create(params)
       session[:user_id] = @user.id
@@ -37,8 +37,8 @@ class UsersController < ApplicationController
     end
   end
 
-  get '/users/:id' do
-    @user = User.find_by(params[:id])
+  get '/users/:slug' do
+    @user = User.find_by_slug(params[:slug])
     erb :'users/show'
   end
 

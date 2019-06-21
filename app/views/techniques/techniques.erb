@@ -1,1 +1,6 @@
-<h3>TECHNIQUE</h3>
+<h3>Techniques</h3>
+<ol>
+  <% @technique.each do |techniques| %>
+    <li><%=technique.content%> (ID:<%=technique.id%>)</li>
+  <%end%>
+</ol>

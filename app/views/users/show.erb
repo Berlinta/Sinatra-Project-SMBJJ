@@ -1,6 +1,7 @@
 <h2> <%= @user.name %> encyclopedia of techniques </h2>
 
-<h3>Armbar</h3>
-<h3>Triange</h3>
-<h3>Crucifix</h3>
-<h3>Kimura</h3>
+<ol>
+  <% @user.techniques.each do |technique| %>
+    <li><%=technique.content%> (ID:<%=technique.id%>)</li>
+  <% end %>
+</ol>
