@@ -4,9 +4,7 @@
 
 <p><%=@technique.content%></p>
 
- <form action="/techniques/<%=@technique.id%>" method="POST">
-  <input type="hidden" name="_method" value="patch">
-  <input type="text" id="content" name="content">
+ <form action="/techniques/<%=@technique.id%>/edit" method="GET">
   <input type="submit" value="Edit Technique">
 </form>
 

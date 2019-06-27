@@ -27,7 +27,6 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do # creating a new user
-    #binding.pry
     if params[:name].empty? || params[:email].empty? || params[:password].empty?
       redirect to '/signup'
     else
@@ -46,9 +45,9 @@ class UsersController < ApplicationController
   get '/logout' do
     if logged_in?      
      session.destroy
-     redirect to '/login'
+     redirect to '/'
     else
-      redirect to '/'
+     redirect to '/'
     end
   end
 
