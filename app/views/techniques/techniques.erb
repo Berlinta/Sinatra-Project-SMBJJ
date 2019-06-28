@@ -1,8 +1,11 @@
-<h3>Techniques</h3>
+<h1>Techniques</h1>
+<br />
+<br />
 <ol>
   <% @techniques.each do |technique| %>
     <li><a href="techniques/<%=technique.id%>"><%=technique.content%></a></li>
   <%end%>
 </ol>
-<p><a href="/logout"> Logout </a></p>
-<p><a href="techniques/new"> Create Technique </a></p>
+<br/>
+<br/>
+<p><a href="techniques/new"> Create Technique </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/logout"> Logout </a></p>
